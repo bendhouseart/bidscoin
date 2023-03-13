@@ -22,6 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          apt-get update && apt-get -y --no-install-recommends python3-pyqt6 python3-pyqt6.qtx11extras
           make install
 
       - name: Install dcm2niix posix
