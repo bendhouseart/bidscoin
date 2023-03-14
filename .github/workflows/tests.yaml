@@ -28,7 +28,7 @@ jobs:
         if: runner.os != 'Windows'
         run: |
           if [ "$RUNNER_OS" == "Linux" ]; then
-            apt-get update && apt-get -y --no-install-recommends python3-pyqt6 python3-pyqt6.qtx11extras
+            apt-get update && apt-get -y --no-install-recommends python3-pyqt6 python3-pyqt6.qtx11extras libegl1-mesa
             mkdir dcm2niix_install/ && cd dcm2niix_install/
             curl -fLO https://github.com/rordenlab/dcm2niix/releases/latest/download/dcm2niix_lnx.zip
             unzip dcm2niix*.zip
