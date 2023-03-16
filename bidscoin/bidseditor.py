@@ -1648,7 +1648,6 @@ class MyWidgetItem(QTableWidgetItem):
 
         if iseditable:
             self.setFlags(QtCore.Qt.ItemFlag.ItemIsEnabled | QtCore.Qt.ItemFlag.ItemIsSelectable | QtCore.Qt.ItemFlag.ItemIsEditable)
-            self.setForeground(QtGui.QColor('black'))
         else:
             self.setFlags(QtCore.Qt.ItemFlag.ItemIsEnabled)
             self.setForeground(QtGui.QColor('gray'))
