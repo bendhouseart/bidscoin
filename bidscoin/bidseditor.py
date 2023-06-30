@@ -51,9 +51,7 @@ HELP_URLS        = {
     'eeg' : f"{HELP_URL_DEFAULT}/04-modality-specific-files/03-electroencephalography.html",
     'ieeg': f"{HELP_URL_DEFAULT}/04-modality-specific-files/04-intracranial-electroencephalography.html",
     'beh' : f"{HELP_URL_DEFAULT}/04-modality-specific-files/07-behavioral-experiments.html",
-    'pet' : f"{HELP_URL_DEFAULT}/04-modality-specific-files/09-positron-emission-tomography.html",
-    # self.unknowndatatypes: HELP_URL_DEFAULT,
-    # self.ignoredatatypes : HELP_URL_DEFAULT
+    'pet' : f"{HELP_URL_DEFAULT}/04-modality-specific-files/09-positron-emission-tomography.html"
 }
 
 TOOLTIP_BIDSCOIN = """BIDScoin
