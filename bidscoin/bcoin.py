@@ -226,7 +226,13 @@ def run_command(command: str) -> int:
     LOGGER.info(f"Running: {command}")
     process = subprocess.run(command, shell=True, capture_output=True, text=True)
     if process.stderr or process.returncode != 0:
-        LOGGER.error(f"Failed to run:\n{command}\nErrorcode {process.returncode}:\n{process.stdout}\n{process.stderr}")
+        # this seems to be broken for dcm2niix -v at the moment, it successfully returns the version but returns an exit
+        # code of 3
+        if 'dcm2niix -v' in command:
+            process.returncode = 0
+            pass
+        else:
+            LOGGER.error(f"Failed to run:\n{command}\nErrorcode {process.returncode}:\n{process.stdout}\n{process.stderr}")
     else:
         LOGGER.info(f"Output:\n{process.stdout}")
 
